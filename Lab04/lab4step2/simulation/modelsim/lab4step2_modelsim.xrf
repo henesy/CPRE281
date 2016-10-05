@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, U:/cpre231x/lab4/lab4step2/normal.v
+source_file = 1, U:/cpre231x/lab4/lab4step2/power_saver.v
+source_file = 1, U:/cpre231x/lab4/lab4step2/multiplexer.v
+source_file = 1, U:/cpre231x/lab4/lab4step2/lab4step2.bdf
+source_file = 1, U:/cpre231x/lab4/lab4step2/db/lab4step2.cbx.xml
+design_name = lab4step2
+instance = comp, \AC~output , AC~output, lab4step2, 1
+instance = comp, \T~input , T~input, lab4step2, 1
+instance = comp, \H~input , H~input, lab4step2, 1
+instance = comp, \P~input , P~input, lab4step2, 1
+instance = comp, \M~input , M~input, lab4step2, 1
+instance = comp, \inst|AC~0 , inst|AC~0, lab4step2, 1

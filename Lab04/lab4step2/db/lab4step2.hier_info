@@ -1,0 +1,35 @@
+|lab4step2
+AC <= multiplexer:inst.AC
+M => multiplexer:inst.M
+P => normal:inst2.P
+P => power_saver:inst1.P
+T => normal:inst2.T
+T => power_saver:inst1.T
+H => normal:inst2.H
+H => power_saver:inst1.H
+
+
+|lab4step2|multiplexer:inst
+M => Decoder0.IN0
+E => AC.DATAA
+F => AC.DATAB
+AC <= AC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4step2|normal:inst2
+P => E.IN1
+P => E.IN1
+T => E.IN0
+T => E.IN0
+H => E.IN1
+H => E.IN1
+E <= E.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4step2|power_saver:inst1
+P => F.IN1
+T => F.IN0
+H => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+

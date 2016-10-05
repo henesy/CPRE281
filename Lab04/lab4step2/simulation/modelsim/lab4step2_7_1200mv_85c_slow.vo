@@ -1,0 +1,147 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition"
+
+// DATE "09/23/2016 11:55:09"
+
+// 
+// Device: Altera EP4CE115F29C7 Package FBGA780
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module lab4step2 (
+	AC,
+	M,
+	P,
+	T,
+	H);
+output 	AC;
+input 	M;
+input 	P;
+input 	T;
+input 	H;
+
+// Design Ports Information
+// AC	=>  Location: PIN_G21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// H	=>  Location: PIN_AC27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// P	=>  Location: PIN_AC28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// T	=>  Location: PIN_AD27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// M	=>  Location: PIN_AB28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("lab4step2_7_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
+wire \AC~output_o ;
+wire \T~input_o ;
+wire \H~input_o ;
+wire \P~input_o ;
+wire \M~input_o ;
+wire \inst|AC~0_combout ;
+
+
+// Location: IOOBUF_X74_Y73_N23
+cycloneive_io_obuf \AC~output (
+	.i(\inst|AC~0_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\AC~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \AC~output .bus_hold = "false";
+defparam \AC~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y13_N8
+cycloneive_io_ibuf \T~input (
+	.i(T),
+	.ibar(gnd),
+	.o(\T~input_o ));
+// synopsys translate_off
+defparam \T~input .bus_hold = "false";
+defparam \T~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y15_N8
+cycloneive_io_ibuf \H~input (
+	.i(H),
+	.ibar(gnd),
+	.o(\H~input_o ));
+// synopsys translate_off
+defparam \H~input .bus_hold = "false";
+defparam \H~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y14_N1
+cycloneive_io_ibuf \P~input (
+	.i(P),
+	.ibar(gnd),
+	.o(\P~input_o ));
+// synopsys translate_off
+defparam \P~input .bus_hold = "false";
+defparam \P~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X115_Y17_N1
+cycloneive_io_ibuf \M~input (
+	.i(M),
+	.ibar(gnd),
+	.o(\M~input_o ));
+// synopsys translate_off
+defparam \M~input .bus_hold = "false";
+defparam \M~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X114_Y17_N8
+cycloneive_lcell_comb \inst|AC~0 (
+// Equation(s):
+// \inst|AC~0_combout  = (\T~input_o  & ((\H~input_o  & ((\P~input_o ) # (!\M~input_o ))) # (!\H~input_o  & (\P~input_o  & !\M~input_o )))) # (!\T~input_o  & (\H~input_o  & (\P~input_o  & !\M~input_o )))
+
+	.dataa(\T~input_o ),
+	.datab(\H~input_o ),
+	.datac(\P~input_o ),
+	.datad(\M~input_o ),
+	.cin(gnd),
+	.combout(\inst|AC~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \inst|AC~0 .lut_mask = 16'h80E8;
+defparam \inst|AC~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign AC = \AC~output_o ;
+
+endmodule
