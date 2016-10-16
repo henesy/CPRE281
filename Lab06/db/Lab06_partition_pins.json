@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "A0",
+					"strict" : false
+				},
+				{
+					"name" : "B0",
+					"strict" : false
+				},
+				{
+					"name" : "C0",
+					"strict" : false
+				},
+				{
+					"name" : "D0",
+					"strict" : false
+				},
+				{
+					"name" : "E0",
+					"strict" : false
+				},
+				{
+					"name" : "F0",
+					"strict" : false
+				},
+				{
+					"name" : "G0",
+					"strict" : false
+				},
+				{
+					"name" : "A1",
+					"strict" : false
+				},
+				{
+					"name" : "A2",
+					"strict" : false
+				},
+				{
+					"name" : "C1",
+					"strict" : false
+				},
+				{
+					"name" : "D1",
+					"strict" : false
+				},
+				{
+					"name" : "E1",
+					"strict" : false
+				},
+				{
+					"name" : "F1",
+					"strict" : false
+				},
+				{
+					"name" : "G1",
+					"strict" : false
+				},
+				{
+					"name" : "C2",
+					"strict" : false
+				},
+				{
+					"name" : "D2",
+					"strict" : false
+				},
+				{
+					"name" : "E2",
+					"strict" : false
+				},
+				{
+					"name" : "F2",
+					"strict" : false
+				},
+				{
+					"name" : "G2",
+					"strict" : false
+				},
+				{
+					"name" : "A3",
+					"strict" : false
+				},
+				{
+					"name" : "B3",
+					"strict" : false
+				},
+				{
+					"name" : "C3",
+					"strict" : false
+				},
+				{
+					"name" : "D3",
+					"strict" : false
+				},
+				{
+					"name" : "E3",
+					"strict" : false
+				},
+				{
+					"name" : "F3",
+					"strict" : false
+				},
+				{
+					"name" : "G3",
+					"strict" : false
+				},
+				{
+					"name" : "B1",
+					"strict" : false
+				},
+				{
+					"name" : "W0",
+					"strict" : false
+				},
+				{
+					"name" : "X0",
+					"strict" : false
+				},
+				{
+					"name" : "Y0",
+					"strict" : false
+				},
+				{
+					"name" : "Z0",
+					"strict" : false
+				},
+				{
+					"name" : "W1",
+					"strict" : false
+				},
+				{
+					"name" : "X1",
+					"strict" : false
+				},
+				{
+					"name" : "Y1",
+					"strict" : false
+				},
+				{
+					"name" : "Z1",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

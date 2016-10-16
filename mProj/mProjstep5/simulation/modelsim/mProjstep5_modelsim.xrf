@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, U:/CPRE281/mProj/mProjstep5/mProjstep5.v
+source_file = 1, U:/CPRE281/mProj/mProjstep5/db/mProjstep5.cbx.xml
+design_name = mProjstep5
+instance = comp, \B~output , B~output, mProjstep5, 1
+instance = comp, \W~input , W~input, mProjstep5, 1
+instance = comp, \X~input , X~input, mProjstep5, 1
+instance = comp, \Y~input , Y~input, mProjstep5, 1
+instance = comp, \Z~input , Z~input, mProjstep5, 1
+instance = comp, \B~0 , B~0, mProjstep5, 1

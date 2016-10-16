@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, U:/CPRE281/mProj/mProjstep8/mProjstep8.bdf
+source_file = 1, c:/altera/16.0/quartus/libraries/others/maxplus2/21mux.bdf
+source_file = 1, U:/CPRE281/mProj/mProjstep8/mprojstep5.v
+design_name = mProjstep8
+instance = comp, \P~output , P~output, mProjstep8, 1
+instance = comp, \D~output , D~output, mProjstep8, 1
+instance = comp, \W~input , W~input, mProjstep8, 1
+instance = comp, \X~input , X~input, mProjstep8, 1
+instance = comp, \Y~input , Y~input, mProjstep8, 1
+instance = comp, \Z~input , Z~input, mProjstep8, 1
+instance = comp, \inst10~0 , inst10~0, mProjstep8, 1

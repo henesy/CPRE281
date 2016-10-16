@@ -1,0 +1,41 @@
+|mProjstep8
+P <= 21mux:inst20.Y
+W => mProjstep5:inst.W
+W => inst6.IN0
+X => mProjstep5:inst.X
+X => inst2.IN0
+X => inst7.IN0
+X => inst5.IN2
+X => inst3.IN2
+Y => mProjstep5:inst.Y
+Y => inst8.IN0
+Y => inst4.IN0
+Y => inst5.IN1
+Z => mProjstep5:inst.Z
+Z => inst2.IN2
+Z => inst3.IN0
+D <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mProjstep8|21mux:inst20
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|mProjstep8|mProjstep5:inst
+W => B.IN0
+W => B.IN0
+X => B.IN0
+X => B.IN1
+Y => B.IN1
+Y => B.IN1
+Y => B.IN1
+Z => B.IN1
+Z => B.IN1
+Z => B.IN1
+B <= B.DB_MAX_OUTPUT_PORT_TYPE
+
+
