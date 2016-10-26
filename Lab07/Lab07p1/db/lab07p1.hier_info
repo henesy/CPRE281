@@ -1,0 +1,96 @@
+|lab07p1
+S0 <= adder_4bit:inst.S0
+X3 => adder_4bit:inst.X3
+Control => inst4.IN0
+Control => inst3.IN0
+Control => inst2.IN0
+Control => adder_4bit:inst.Cin
+Control => inst1.IN0
+Y3 => inst4.IN1
+X2 => adder_4bit:inst.X2
+Y2 => inst3.IN1
+X1 => adder_4bit:inst.X1
+Y1 => inst2.IN1
+X0 => adder_4bit:inst.X0
+Y0 => inst1.IN1
+S1 <= adder_4bit:inst.S1
+S2 <= adder_4bit:inst.S2
+S3 <= adder_4bit:inst.S3
+Cout <= adder_4bit:inst.Cout
+Overflow <= adder_4bit:inst.overflow
+
+
+|lab07p1|adder_4bit:inst
+S0 <= full_adder:inst3.S
+Cin => full_adder:inst3.Cin
+X0 => full_adder:inst3.X
+Y0 => full_adder:inst3.Y
+S1 <= full_adder:inst2.S
+X1 => full_adder:inst2.X
+Y1 => full_adder:inst2.Y
+S2 <= full_adder:inst1.S
+X2 => full_adder:inst1.X
+Y2 => full_adder:inst1.Y
+S3 <= full_adder:inst.S
+X3 => full_adder:inst.X
+Y3 => full_adder:inst.Y
+Cout <= full_adder:inst.Cout
+overflow <= inst100.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab07p1|adder_4bit:inst|full_adder:inst3
+Cin => S.IN0
+Cin => Cout.IN0
+Cin => Cout.IN0
+X => S.IN1
+X => Cout.IN1
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab07p1|adder_4bit:inst|full_adder:inst2
+Cin => S.IN0
+Cin => Cout.IN0
+Cin => Cout.IN0
+X => S.IN1
+X => Cout.IN1
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab07p1|adder_4bit:inst|full_adder:inst1
+Cin => S.IN0
+Cin => Cout.IN0
+Cin => Cout.IN0
+X => S.IN1
+X => Cout.IN1
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab07p1|adder_4bit:inst|full_adder:inst
+Cin => S.IN0
+Cin => Cout.IN0
+Cin => Cout.IN0
+X => S.IN1
+X => Cout.IN1
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
