@@ -1,0 +1,136 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+
+// 
+// Device: Altera EP4CE115F29C7 Package FBGA780
+// 
+
+//
+// This file contains Slow Corner delays for the design using part EP4CE115F29C7,
+// with speed grade 7, core voltage 1.2V, and temperature 0 Celsius
+//
+
+// 
+// This SDF file should be used for ModelSim-Altera (Verilog) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "lab9step3b")
+  (DATE "11/04/2016 12:46:25")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus Prime")
+  (VERSION "Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE Q\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1867:1867:1867) (2008:2008:2008))
+        (IOPATH i o (2549:2549:2549) (2570:2570:2570))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE \~Q\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (2159:2159:2159) (1983:1983:1983))
+        (IOPATH i o (2580:2580:2580) (2559:2559:2559))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE Clk\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (634:634:634) (718:718:718))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE D\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (684:684:684) (768:768:768))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE inst4\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (246:246:246) (289:289:289))
+        (PORT datab (3692:3692:3692) (3884:3884:3884))
+        (PORT datac (4430:4430:4430) (4629:4629:4629))
+        (PORT datad (205:205:205) (231:231:231))
+        (IOPATH dataa combout (346:346:346) (357:357:357))
+        (IOPATH datab combout (381:381:381) (378:378:378))
+        (IOPATH datac combout (263:263:263) (251:251:251))
+        (IOPATH datad combout (144:144:144) (125:125:125))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE inst1\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (246:246:246) (288:288:288))
+        (PORT datab (3693:3693:3693) (3885:3885:3885))
+        (PORT datac (4432:4432:4432) (4631:4631:4631))
+        (PORT datad (204:204:204) (230:230:230))
+        (IOPATH dataa combout (369:369:369) (389:389:389))
+        (IOPATH datab combout (369:369:369) (331:331:331))
+        (IOPATH datac combout (265:265:265) (251:251:251))
+        (IOPATH datad combout (144:144:144) (125:125:125))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE inst2)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (238:238:238) (275:275:275))
+        (PORT datac (215:215:215) (247:247:247))
+        (PORT datad (216:216:216) (249:249:249))
+        (IOPATH dataa combout (369:369:369) (389:389:389))
+        (IOPATH datac combout (265:265:265) (251:251:251))
+        (IOPATH datad combout (144:144:144) (125:125:125))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE inst5)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (247:247:247) (291:291:291))
+        (PORT datac (217:217:217) (248:248:248))
+        (IOPATH dataa combout (380:380:380) (377:377:377))
+        (IOPATH datac combout (265:265:265) (252:252:252))
+      )
+    )
+  )
+)

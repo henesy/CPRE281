@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, U:/CPRE281/Lab09/lab9step3b/lab9step3b.bdf
+source_file = 1, U:/CPRE281/Lab09/lab9step3b/db/lab9step3b.cbx.xml
+design_name = lab9step3b
+instance = comp, \Q~output , Q~output, lab9step3b, 1
+instance = comp, \~Q~output , ~Q~output, lab9step3b, 1
+instance = comp, \Clk~input , Clk~input, lab9step3b, 1
+instance = comp, \D~input , D~input, lab9step3b, 1
+instance = comp, \inst4~1 , inst4~1, lab9step3b, 1
+instance = comp, \inst1~1 , inst1~1, lab9step3b, 1

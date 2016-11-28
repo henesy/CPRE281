@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, U:/CPRE281/Lab09/lab9step1/lab9step1.bdf
+source_file = 1, U:/CPRE281/Lab09/lab9step1/db/lab9step1.cbx.xml
+design_name = lab9step1
+instance = comp, \Q~output , Q~output, lab9step1, 1
+instance = comp, \Q2~output , Q2~output, lab9step1, 1
+instance = comp, \Qn~output , Qn~output, lab9step1, 1
+instance = comp, \Qn2~output , Qn2~output, lab9step1, 1
+instance = comp, \S~input , S~input, lab9step1, 1
+instance = comp, \R~input , R~input, lab9step1, 1
+instance = comp, \S2~input , S2~input, lab9step1, 1
+instance = comp, \R2~input , R2~input, lab9step1, 1

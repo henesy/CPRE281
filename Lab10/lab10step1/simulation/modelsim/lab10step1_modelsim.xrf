@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, U:/CPRE281/Lab10/lab10step1/lab10step1.bdf
+source_file = 1, U:/CPRE281/Lab10/lab10step1/db/lab10step1.cbx.xml
+design_name = lab10step1
+instance = comp, \Q1~output , Q1~output, lab10step1, 1
+instance = comp, \Q2~output , Q2~output, lab10step1, 1
+instance = comp, \Q3~output , Q3~output, lab10step1, 1
+instance = comp, \Q4~output , Q4~output, lab10step1, 1
+instance = comp, \Clk~input , Clk~input, lab10step1, 1
+instance = comp, \In~input , In~input, lab10step1, 1
+instance = comp, \inst~feeder , inst~feeder, lab10step1, 1
+instance = comp, \inst1~feeder , inst1~feeder, lab10step1, 1
+instance = comp, \inst2~feeder , inst2~feeder, lab10step1, 1
+instance = comp, \inst3~feeder , inst3~feeder, lab10step1, 1

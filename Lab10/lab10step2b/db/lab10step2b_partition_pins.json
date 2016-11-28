@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Q3",
+					"strict" : false
+				},
+				{
+					"name" : "Q0",
+					"strict" : false
+				},
+				{
+					"name" : "Q1",
+					"strict" : false
+				},
+				{
+					"name" : "Q2",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "In",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
