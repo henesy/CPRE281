@@ -51,6 +51,11 @@ module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, 
 				begin
 					/* pop */
 					under = 1;
+					r00 = 0;
+					r01 = 0;
+					r02 = 0;
+					r03 = 0;
+					state = state;
 				end
 			end
 			
@@ -167,6 +172,16 @@ module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, 
 			
 			over = 0;
 			under = 0;
+		end
+		
+		if(under == 1 && state > 0)
+		begin
+			under = 0;
+		end
+		
+		if(over == 1 && state < 4)
+		begin
+			over = 0;
 		end
 		
 	end

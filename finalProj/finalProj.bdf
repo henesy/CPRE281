@@ -145,7 +145,7 @@ agreement for further details.
 	(input)
 	(rect 2160 816 2328 832)
 	(text "INPUT" (rect 125 0 166 11)(font "Arial" (font_size 6)))
-	(text "reset" (rect 5 0 47 14)(font "Arial" ))
+	(text "reset" (rect 5 0 46 14)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -156,6 +156,7 @@ agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 152 18)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 2072 832 2160 864))
 )
 (pin
 	(output)
