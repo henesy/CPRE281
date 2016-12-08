@@ -1,8 +1,10 @@
-module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, r13, r20, r21, r22, r23, r30, r31, r32, r33, ctl, over, under, rst);
-	input w2, w1, in3, in2, in1, in0, ctl, rst;
+module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, r13, r20, r21, r22, r23, r30, r31, r32, r33, ctl, over, under, rst, w3);
+	input w2, w1, in3, in2, in1, in0, ctl, rst, w3;
 	output reg r00, r01, r02, r03, r10, r11, r12, r13, r20, r21, r22, r23, r30, r31, r32, r33, over, under;
 	
 	integer state;
+	
+	reg t0, t1, t2, t3;
 	
 	initial
 	begin
@@ -27,6 +29,11 @@ module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, 
 	r31 = 0;
 	r32 = 0;
 	r33 = 0;
+	
+	t0 = 0;
+	t1 = 0;
+	t2 = 0;
+	t3 = 0;
 	
 	over = 0;
 	under = 0;
@@ -57,6 +64,16 @@ module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, 
 					r03 = 0;
 					state = state;
 				end
+				else if(w3 == 1)
+				begin
+					/* pop & exch */
+					under = 1;
+					r00 = 0;
+					r01 = 0;
+					r02 = 0;
+					r03 = 0;
+					state = state;
+				end
 			end
 			
 			1:
@@ -79,6 +96,15 @@ module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, 
 					r03 = 0;
 					state = state - 1;
 				end
+				else if(w3 == 1)
+				begin
+					/* pop & exch */		
+					r00 = r00;
+					r01 = r01;
+					r02 = r02;
+					r03 = r03;
+					state = state;
+				end
 			end
 			
 			2:
@@ -100,6 +126,25 @@ module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, 
 					r12 = 0;
 					r13 = 0;
 					state = state - 1;
+				end
+				else if(w3 == 1)
+				begin
+					/* pop & exch */
+					t0 = r00;
+					t1 = r01;
+					t2 = r02;
+					t3 = r03;
+					
+					r00 = r10;
+					r01 = r11;
+					r02 = r12;
+					r03 = r13;
+					
+					r10 = t0;
+					r11 = t1;
+					r12 = t2;
+					r13 = t3;
+					state = state;
 				end
 			end
 			
@@ -124,6 +169,25 @@ module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, 
 					r23 = 0;
 					state = state - 1;
 				end
+				else if(w3 == 1)
+				begin
+					/* pop & exch */
+					t0 = r20;
+					t1 = r21;
+					t2 = r22;
+					t3 = r23;
+					
+					r20 = r10;
+					r21 = r11;
+					r22 = r12;
+					r23 = r13;
+					
+					r10 = t0;
+					r11 = t1;
+					r12 = t2;
+					r13 = t3;
+					state = state;
+				end
 			end
 			
 			4:
@@ -141,6 +205,25 @@ module beststack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, 
 					r32 = 0;
 					r33 = 0;
 					state = state - 1;
+				end
+				else if(w3 == 1)
+				begin
+					/* pop & exch */
+					t0 = r30;
+					t1 = r31;
+					t2 = r32;
+					t3 = r33;
+					
+					r30 = r20;
+					r31 = r21;
+					r32 = r22;
+					r33 = r23;
+					
+					r20 = t0;
+					r21 = t1;
+					r22 = t2;
+					r23 = t3;
+					state = state;
 				end
 			end
 		

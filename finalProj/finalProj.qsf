@@ -105,4 +105,5 @@ set_location_assignment PIN_Y22 -to S15
 set_location_assignment PIN_W21 -to S16
 set_location_assignment PIN_AA26 -to S8
 set_location_assignment PIN_Y25 -to S9
+set_location_assignment PIN_AB28 -to w3
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

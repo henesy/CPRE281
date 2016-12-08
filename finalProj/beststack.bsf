@@ -81,6 +81,13 @@ agreement for further details.
 		(line (pt 0 144)(pt 16 144)(line_width 1))
 	)
 	(port
+		(pt 0 160)
+		(input)
+		(text "w3" (rect 0 0 10 12)(font "Arial" ))
+		(text "w3" (rect 21 155 31 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
 		(pt 136 32)
 		(output)
 		(text "r00" (rect 0 0 12 12)(font "Arial" ))
