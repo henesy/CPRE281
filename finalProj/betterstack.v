@@ -1,22 +1,128 @@
 
-module betterstack(z3, z2, z1, w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, r13, r20, r21, r22, r23, r30, r31, r32, r33, or00, or01, or02, or03, or10, or11, or12, or13, or20, or21, or22, or23, or30, or31, or32, or33, ctl, zz3, zz2, zz1);
-	input ctl, z3, z2, z1, w2, w1, in3, in2, in1, in0, or00, or01, or02, or03, or10, or11, or12, or13, or20, or21, or22, or23, or30, or31, or32, or33;
-	output reg r00, r01, r02, r03, r10, r11, r12, r13, r20, r21, r22, r23, r30, r31, r32, r33, zz3, zz2, zz1;
-	
-	
-	always@(*)
+module betterstack(w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r10, r11, r12, r13, r20, r21, r22, r23, r30, r31, r32, r33, or00, or01, or02, or03, or10, or11, or12, or13, or20, or21, or22, or23, or30, or31, or32, or33, ctl, y3, y2, y1, z3, z2, z1, lopd, opd);
+	input ctl, w2, w1, in3, in2, in1, in0, or00, or01, or02, or03, or10, or11, or12, or13, or20, or21, or22, or23, or30, or31, or32, or33, y3, y2, y1, lopd;
+	output reg r00, r01, r02, r03, r10, r11, r12, r13, r20, r21, r22, r23, r30, r31, r32, r33, z3, z2, z1, opd;
+		
+	always@(ctl)
 	begin
 	
-	zz3 = z3;
-	zz2 = z2;
-	zz1 = z1;
-	
-	if(ctl)
+	if(ctl == 0 && lopd == 0)
 	begin
+		opd = 1;
+		/* begin raw 3 bit state logic */
+		if(y3 == 0 && y2 == 0 && y1 == 0)
+		begin
+		/* 000 */
+			if(w2 == 0 && w1 == 0)
+			begin
+			/* push */
+				z3 = 0;
+				z2 = 0;
+				z1 = 1;
+			end
+			
+			else if(w2 == 0 && w1 == 1)
+			begin
+			/* pop */
+				z3 = 0;
+				z2 = 0;
+				z1 = 0;
+			end
+		end
+		
+		else if(y3 == 0 && y2 == 0 && y1 == 1)
+		begin
+		/* 001 */
+			if(w2 == 0 && w1 == 0)
+			begin
+			/* push */
+				z3 = 0;
+				z2 = 1;
+				z1 = 0;
+			end
+			
+			else if(w2 == 0 && w1 == 1)
+			begin
+			/* pop */
+				z3 = 0;
+				z2 = 0;
+				z1 = 0;
+			end
+		end
+		
+		else if(y3 == 0 && y2 == 1 && y1 == 0)
+		begin
+		/* 010 */
+			if(w2 == 0 && w1 == 0)
+			begin
+			/* push */
+				z3 = 0;
+				z2 = 1;
+				z1 = 1;
+			end
+			
+			else if(w2 == 0 && w1 == 1)
+			begin
+			/* pop */
+				z3 = 0;
+				z2 = 0;
+				z1 = 1;
+			end
+		end
+		
+		else if(y3 == 0 && y2 == 1 && y1 == 1)
+		begin
+		/* 011 */
+			if(w2 == 0 && w1 == 0)
+			begin
+			/* push */
+				z3 = 1;
+				z2 = 0;
+				z1 = 0;
+			end
+			
+			else if(w2 == 0 && w1 == 1)
+			begin
+			/* pop */
+				z3 = 0;
+				z2 = 1;
+				z1 = 0;
+			end
+		end
+		
+		else if(y3 == 1 && y2 == 0 && y1 == 0)
+		begin
+		/* 100 */
+			if(w2 == 0 && w1 == 0)
+			begin
+			/* push */
+				z3 = 1;
+				z2 = 0;
+				z1 = 0;
+			end
+			
+			else if(w2 == 0 && w1 == 1)
+			begin
+			/* pop */
+				z3 = 0;
+				z2 = 1;
+				z1 = 1;
+			end
+		end
+		else
+		begin
+			z3 = y3;
+			z2 = y2;
+			z1 = y1;
+		end
+	
+	
+		/*** END STATE MACHINE ***/
+		
 		/* push */
 		if(w2 == 0 && w1 == 0)
 		begin
-			case({z3, z2, z1})
+			case({y3, y2, y1})
 			3'b000:
 			begin
 			/* 0 in queue */
@@ -67,9 +173,9 @@ module betterstack(z3, z2, z1, w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r
 		
 		
 		/* pop */
-		if(w2 == 0 && w1 == 1)
+		else if(w2 == 0 && w1 == 1)
 		begin
-			case({z3, z2, z1})
+			case({y3, y2, y1})
 			3'b000:
 			begin
 			/* 0 in queue */
@@ -117,6 +223,32 @@ module betterstack(z3, z2, z1, w2, w1, in3, in2, in1, in0, r00, r01, r02, r03, r
 			
 			endcase
 		end
+		else
+		begin
+			r00 = or00;
+			r01 = or01;
+			r02 = or02;
+			r03 = or03;
+			
+			r10 = or10;
+			r11 = or11;
+			r12 = or12;
+			r13 = or13;
+			
+			r20 = or20;
+			r21 = or21;
+			r22 = or22;
+			r23 = or23;
+			
+			r30 = or30;
+			r31 = or31;
+			r32 = or32;
+			r33 = or33;
+		end
+	end
+	else
+	begin
+		opd = 0;
 	end
 		
 	end
