@@ -1,0 +1,13 @@
+module filtera(z3, z2, z1, en);
+	input z3, z2, z1;
+	output reg en;
+	
+	always@(*)
+	begin
+		case({z3, z2, z1})
+		3'b000: en = 0;
+		default: en = 1;
+		endcase
+	end
+	
+endmodule

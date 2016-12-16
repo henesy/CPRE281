@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for finalProj
-Wed Dec 07 22:36:12 2016
+Fri Dec 09 11:35:22 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -104,9 +104,9 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.7%      ;
-;     Processor 3            ;   0.5%      ;
-;     Processor 4            ;   0.4%      ;
+;     Processor 2            ;   0.8%      ;
+;     Processor 3            ;   0.8%      ;
+;     Processor 4            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -124,7 +124,7 @@ agreement for further details.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 308.93 MHz ; 250.0 MHz       ; ctl        ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 311.82 MHz ; 250.0 MHz       ; ctl        ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -140,7 +140,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; ctl   ; -2.237 ; -37.349            ;
+; ctl   ; -2.207 ; -43.272            ;
 +-------+--------+--------------------+
 
 
@@ -170,7 +170,7 @@ No paths to report.
 +-------+--------+----------------------------------+
 ; Clock ; Slack  ; End Point TNS                    ;
 +-------+--------+----------------------------------+
-; ctl   ; -3.000 ; -29.985                          ;
+; ctl   ; -3.000 ; -33.840                          ;
 +-------+--------+----------------------------------+
 
 
@@ -179,94 +179,103 @@ No paths to report.
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; -2.237 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 3.288      ;
-; -2.237 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 3.288      ;
-; -2.237 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 3.288      ;
-; -2.237 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 3.288      ;
-; -2.080 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 3.106      ;
-; -2.080 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 3.106      ;
-; -2.080 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 3.106      ;
-; -2.080 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 3.106      ;
-; -2.072 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 3.123      ;
-; -2.072 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 3.123      ;
-; -2.072 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 3.123      ;
-; -2.072 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 3.123      ;
-; -1.931 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 2.982      ;
-; -1.931 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 2.982      ;
-; -1.931 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 2.982      ;
-; -1.931 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.033      ; 2.982      ;
-; -1.916 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 2.942      ;
-; -1.916 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 2.942      ;
-; -1.916 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 2.942      ;
-; -1.916 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 2.942      ;
-; -1.840 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; 0.063      ; 2.921      ;
-; -1.811 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.944      ;
-; -1.776 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.909      ;
-; -1.776 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.909      ;
-; -1.776 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.909      ;
-; -1.752 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 2.778      ;
-; -1.752 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 2.778      ;
-; -1.752 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 2.778      ;
-; -1.752 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.008      ; 2.778      ;
-; -1.681 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.814      ;
-; -1.681 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.814      ;
-; -1.681 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.814      ;
-; -1.681 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.814      ;
-; -1.647 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.780      ;
-; -1.611 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.744      ;
-; -1.611 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.744      ;
-; -1.611 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.115      ; 2.744      ;
-; -1.610 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.048     ; 2.580      ;
-; -1.602 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.048     ; 2.572      ;
-; -1.537 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; 0.063      ; 2.618      ;
-; -1.481 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.048     ; 2.451      ;
-; -1.477 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; 0.063      ; 2.558      ;
-; -1.473 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.063      ; 2.554      ;
-; -1.437 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.048     ; 2.407      ;
-; -1.418 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.048     ; 2.388      ;
-; -1.376 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.528      ;
-; -1.376 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.528      ;
-; -1.376 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.528      ;
-; -1.376 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.528      ;
-; -1.208 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.360      ;
-; -1.206 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.358      ;
-; -1.205 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.357      ;
-; -1.188 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.048     ; 2.158      ;
-; -1.187 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.339      ;
-; -1.140 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.292      ;
-; -1.140 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.292      ;
-; -1.140 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.292      ;
-; -1.140 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.134      ; 2.292      ;
-; -0.913 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.048     ; 1.883      ;
-; -0.851 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.932      ;
-; -0.714 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; -0.049     ; 1.683      ;
-; -0.623 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.189     ; 1.452      ;
-; -0.616 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.189     ; 1.445      ;
-; -0.603 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.578      ;
-; -0.574 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.180     ; 1.412      ;
-; -0.525 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.180     ; 1.363      ;
-; -0.524 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.048     ; 1.494      ;
-; -0.518 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 1.553      ;
-; -0.503 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.180     ; 1.341      ;
-; -0.494 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.180     ; 1.332      ;
-; -0.487 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 1.522      ;
-; -0.485 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.039      ; 1.542      ;
-; -0.467 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.442      ;
-; -0.464 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.039      ; 1.521      ;
-; -0.457 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 1.492      ;
-; -0.411 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.492      ;
-; -0.396 ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.095     ; 1.319      ;
-; -0.362 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.039      ; 1.419      ;
-; -0.359 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.189     ; 1.188      ;
-; -0.350 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.189     ; 1.179      ;
-; -0.345 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.095     ; 1.268      ;
-; -0.343 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.095     ; 1.266      ;
-; -0.316 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.095     ; 1.239      ;
-; -0.295 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.039      ; 1.352      ;
-; -0.257 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 1.292      ;
-; -0.254 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.229      ;
-; -0.229 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.204      ;
-; -0.189 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.164      ;
+; -2.207 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 3.263      ;
+; -2.207 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 3.263      ;
+; -2.207 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 3.263      ;
+; -2.207 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 3.263      ;
+; -2.097 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 3.153      ;
+; -2.097 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 3.153      ;
+; -2.097 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 3.153      ;
+; -2.097 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 3.153      ;
+; -2.036 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 3.067      ;
+; -2.036 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 3.067      ;
+; -2.036 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 3.067      ;
+; -2.036 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 3.067      ;
+; -1.953 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.984      ;
+; -1.953 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.984      ;
+; -1.953 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.984      ;
+; -1.953 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.984      ;
+; -1.941 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.972      ;
+; -1.941 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.972      ;
+; -1.941 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.972      ;
+; -1.941 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.972      ;
+; -1.929 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.985      ;
+; -1.929 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.985      ;
+; -1.929 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.985      ;
+; -1.929 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.985      ;
+; -1.915 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.904      ;
+; -1.915 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.904      ;
+; -1.915 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.904      ;
+; -1.915 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.904      ;
+; -1.905 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.894      ;
+; -1.905 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.894      ;
+; -1.905 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.894      ;
+; -1.905 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.894      ;
+; -1.846 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.835      ;
+; -1.846 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.835      ;
+; -1.846 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.835      ;
+; -1.846 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.835      ;
+; -1.826 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.795      ;
+; -1.782 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.751      ;
+; -1.740 ; beststack:inst|state[1] ; beststack:inst|z3       ; ctl          ; ctl         ; 1.000        ; 0.022      ; 2.780      ;
+; -1.669 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.638      ;
+; -1.666 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.635      ;
+; -1.657 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.626      ;
+; -1.625 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.594      ;
+; -1.583 ; beststack:inst|state[0] ; beststack:inst|z3       ; ctl          ; ctl         ; 1.000        ; 0.022      ; 2.623      ;
+; -1.566 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.535      ;
+; -1.563 ; beststack:inst|state[1] ; beststack:inst|z1       ; ctl          ; ctl         ; 1.000        ; 0.022      ; 2.603      ;
+; -1.551 ; beststack:inst|state[0] ; beststack:inst|z1       ; ctl          ; ctl         ; 1.000        ; 0.022      ; 2.591      ;
+; -1.528 ; beststack:inst|state[2] ; beststack:inst|z2       ; ctl          ; ctl         ; 1.000        ; 0.022      ; 2.568      ;
+; -1.528 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.497      ;
+; -1.498 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.533      ;
+; -1.498 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.533      ;
+; -1.498 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.533      ;
+; -1.498 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.533      ;
+; -1.498 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.533      ;
+; -1.498 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.533      ;
+; -1.498 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.533      ;
+; -1.498 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.533      ;
+; -1.496 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.465      ;
+; -1.474 ; beststack:inst|state[1] ; beststack:inst|z2       ; ctl          ; ctl         ; 1.000        ; 0.022      ; 2.514      ;
+; -1.408 ; beststack:inst|state[0] ; beststack:inst|z2       ; ctl          ; ctl         ; 1.000        ; 0.022      ; 2.448      ;
+; -1.366 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.049     ; 2.335      ;
+; -1.297 ; beststack:inst|state[2] ; beststack:inst|z1       ; ctl          ; ctl         ; 1.000        ; 0.022      ; 2.337      ;
+; -1.220 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.255      ;
+; -1.220 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.255      ;
+; -1.220 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.255      ;
+; -1.220 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 2.255      ;
+; -1.202 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.114     ; 2.106      ;
+; -1.064 ; beststack:inst|state[2] ; beststack:inst|z3       ; ctl          ; ctl         ; 1.000        ; 0.022      ; 2.104      ;
+; -0.949 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.924      ;
+; -0.922 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.114     ; 1.826      ;
+; -0.911 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.049     ; 1.880      ;
+; -0.886 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.911      ;
+; -0.871 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; -0.072     ; 1.817      ;
+; -0.799 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.111     ; 1.706      ;
+; -0.710 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.051     ; 1.677      ;
+; -0.696 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.051     ; 1.663      ;
+; -0.619 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; -0.120     ; 1.517      ;
+; -0.609 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; -0.120     ; 1.507      ;
+; -0.605 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.114     ; 1.509      ;
+; -0.447 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.472      ;
+; -0.431 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.456      ;
+; -0.426 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.114     ; 1.330      ;
+; -0.413 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.028     ; 1.403      ;
+; -0.398 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.028     ; 1.388      ;
+; -0.375 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.076     ; 1.317      ;
+; -0.369 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.028     ; 1.359      ;
+; -0.350 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.028     ; 1.340      ;
+; -0.345 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.111     ; 1.252      ;
+; -0.333 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.111     ; 1.240      ;
+; -0.284 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; -0.120     ; 1.182      ;
+; -0.275 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; -0.120     ; 1.173      ;
+; -0.257 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.051     ; 1.224      ;
+; -0.228 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.076     ; 1.170      ;
+; -0.220 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.076     ; 1.162      ;
+; -0.209 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.076     ; 1.151      ;
+; -0.184 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.051     ; 1.151      ;
+; -0.032 ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.111     ; 0.939      ;
 ; 0.241  ; beststack:inst|over     ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.043     ; 0.734      ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -277,94 +286,103 @@ No paths to report.
 ; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.440 ; beststack:inst|over     ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 0.669      ;
-; 0.794 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.095      ; 1.075      ;
-; 0.809 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.095      ; 1.090      ;
-; 0.811 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.189      ; 1.186      ;
-; 0.838 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.095      ; 1.119      ;
-; 0.877 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.180      ; 1.243      ;
-; 0.880 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.109      ;
-; 0.883 ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.112      ;
-; 0.901 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.130      ;
-; 0.907 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.136      ;
-; 0.935 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; -0.017     ; 1.104      ;
-; 0.956 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; -0.017     ; 1.125      ;
-; 0.960 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.180      ; 1.326      ;
-; 0.965 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.189      ; 1.340      ;
-; 0.976 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.227      ; 1.389      ;
-; 0.997 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.352      ;
-; 0.999 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.354      ;
-; 0.999 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.354      ;
-; 1.005 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.189      ; 1.380      ;
-; 1.008 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.180      ; 1.374      ;
-; 1.019 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.180      ; 1.385      ;
-; 1.038 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.189      ; 1.413      ;
-; 1.069 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.095      ; 1.350      ;
-; 1.112 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.467      ;
-; 1.113 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.468      ;
-; 1.113 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.468      ;
-; 1.117 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; -0.039     ; 1.264      ;
-; 1.117 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.048      ; 1.351      ;
-; 1.133 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; -0.039     ; 1.280      ;
-; 1.137 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; -0.017     ; 1.306      ;
-; 1.145 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; -0.039     ; 1.292      ;
-; 1.147 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; -0.017     ; 1.316      ;
-; 1.148 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.530      ;
-; 1.150 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.048      ; 1.384      ;
-; 1.153 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.535      ;
-; 1.187 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.227      ; 1.600      ;
-; 1.204 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; -0.039     ; 1.351      ;
-; 1.246 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.601      ;
-; 1.255 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.637      ;
-; 1.259 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.614      ;
-; 1.260 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.642      ;
-; 1.260 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.615      ;
-; 1.260 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.615      ;
-; 1.279 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.766      ;
-; 1.281 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.768      ;
-; 1.281 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.768      ;
-; 1.286 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.773      ;
-; 1.299 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.049      ; 1.534      ;
-; 1.312 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.799      ;
-; 1.314 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 1.781      ;
-; 1.333 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.820      ;
-; 1.334 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.821      ;
-; 1.335 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.822      ;
-; 1.368 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.723      ;
-; 1.387 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.769      ;
-; 1.393 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.775      ;
-; 1.415 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.227      ; 1.828      ;
-; 1.419 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.906      ;
-; 1.430 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 1.897      ;
-; 1.440 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.927      ;
-; 1.441 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.928      ;
-; 1.441 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.823      ;
-; 1.442 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.301      ; 1.929      ;
-; 1.445 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.827      ;
-; 1.468 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.048      ; 1.702      ;
-; 1.480 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.227      ; 1.893      ;
-; 1.494 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.876      ;
-; 1.500 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 1.882      ;
-; 1.515 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.169      ; 1.870      ;
-; 1.573 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.040      ;
-; 1.605 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.072      ;
-; 1.608 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.075      ;
-; 1.610 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.077      ;
-; 1.623 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.227      ; 2.036      ;
-; 1.654 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.048      ; 1.888      ;
-; 1.693 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 2.075      ;
-; 1.698 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.196      ; 2.080      ;
-; 1.712 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.179      ;
-; 1.726 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.193      ;
-; 1.729 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.196      ;
-; 1.767 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.048      ; 2.001      ;
-; 1.855 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.322      ;
-; 1.869 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.336      ;
-; 1.872 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.281      ; 2.339      ;
-; 1.983 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.048      ; 2.217      ;
-; 1.999 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.227      ; 2.412      ;
-; 2.006 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.048      ; 2.240      ;
-; 2.043 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.048      ; 2.277      ;
+; 0.604 ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.076      ; 0.866      ;
+; 0.764 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.111      ; 1.061      ;
+; 0.769 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.120      ; 1.075      ;
+; 0.779 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.111      ; 1.076      ;
+; 0.781 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.111      ; 1.078      ;
+; 0.825 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.076      ; 1.087      ;
+; 0.827 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.120      ; 1.133      ;
+; 0.864 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.051      ; 1.101      ;
+; 0.864 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.076      ; 1.126      ;
+; 0.867 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.049      ; 1.102      ;
+; 0.877 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.051      ; 1.114      ;
+; 0.942 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.111      ; 1.239      ;
+; 0.972 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.114      ; 1.272      ;
+; 0.989 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.114      ; 1.289      ;
+; 0.990 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.189      ; 1.365      ;
+; 1.013 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.114      ; 1.313      ;
+; 1.015 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.028      ; 1.229      ;
+; 1.021 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.049      ; 1.256      ;
+; 1.022 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.189      ; 1.397      ;
+; 1.031 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.114      ; 1.331      ;
+; 1.079 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.051      ; 1.316      ;
+; 1.126 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.517      ;
+; 1.142 ; beststack:inst|state[1] ; beststack:inst|z1       ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.533      ;
+; 1.142 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.028      ; 1.356      ;
+; 1.144 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.049      ; 1.379      ;
+; 1.159 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.051      ; 1.396      ;
+; 1.170 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.551      ;
+; 1.172 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.553      ;
+; 1.173 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.554      ;
+; 1.187 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.568      ;
+; 1.256 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.120      ; 1.562      ;
+; 1.266 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.120      ; 1.572      ;
+; 1.273 ; beststack:inst|state[0] ; beststack:inst|z1       ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.664      ;
+; 1.284 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.675      ;
+; 1.294 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.675      ;
+; 1.296 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.677      ;
+; 1.297 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.678      ;
+; 1.311 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.692      ;
+; 1.314 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.076      ; 1.576      ;
+; 1.321 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.702      ;
+; 1.324 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.705      ;
+; 1.325 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.706      ;
+; 1.336 ; beststack:inst|state[2] ; beststack:inst|z2       ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.727      ;
+; 1.360 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.195      ; 1.741      ;
+; 1.362 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.753      ;
+; 1.402 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.793      ;
+; 1.403 ; beststack:inst|state[2] ; beststack:inst|z3       ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.794      ;
+; 1.405 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.796      ;
+; 1.406 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.797      ;
+; 1.412 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.189      ; 1.787      ;
+; 1.421 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.072      ; 1.679      ;
+; 1.446 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.789      ;
+; 1.448 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.791      ;
+; 1.452 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.049      ; 1.687      ;
+; 1.453 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.028      ; 1.667      ;
+; 1.461 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.804      ;
+; 1.503 ; beststack:inst|state[1] ; beststack:inst|z2       ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.894      ;
+; 1.503 ; beststack:inst|state[0] ; beststack:inst|z2       ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.894      ;
+; 1.503 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.846      ;
+; 1.531 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 1.868      ;
+; 1.532 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 1.869      ;
+; 1.532 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 1.869      ;
+; 1.533 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 1.870      ;
+; 1.575 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.966      ;
+; 1.575 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.804      ;
+; 1.577 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.920      ;
+; 1.577 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.920      ;
+; 1.578 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.969      ;
+; 1.578 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.921      ;
+; 1.579 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.970      ;
+; 1.589 ; beststack:inst|state[2] ; beststack:inst|z1       ; ctl          ; ctl         ; 0.000        ; 0.205      ; 1.980      ;
+; 1.597 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.049      ; 1.832      ;
+; 1.619 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.962      ;
+; 1.620 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.963      ;
+; 1.634 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.977      ;
+; 1.637 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 1.980      ;
+; 1.638 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 2.029      ;
+; 1.641 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 2.032      ;
+; 1.642 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.205      ; 2.033      ;
+; 1.652 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 1.989      ;
+; 1.668 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 2.005      ;
+; 1.668 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 2.005      ;
+; 1.669 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 2.006      ;
+; 1.687 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.157      ; 2.030      ;
+; 1.710 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.028      ; 1.924      ;
+; 1.723 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.049      ; 1.958      ;
+; 1.736 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.049      ; 1.971      ;
+; 1.775 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 2.112      ;
+; 1.791 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 2.128      ;
+; 1.791 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 2.128      ;
+; 1.792 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.151      ; 2.129      ;
+; 1.853 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.049      ; 2.088      ;
+; 1.939 ; beststack:inst|state[0] ; beststack:inst|z3       ; ctl          ; ctl         ; 0.000        ; 0.205      ; 2.330      ;
+; 1.967 ; beststack:inst|state[1] ; beststack:inst|z3       ; ctl          ; ctl         ; 0.000        ; 0.205      ; 2.358      ;
+; 2.055 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.049      ; 2.290      ;
+; 2.247 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.049      ; 2.482      ;
+; 2.248 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.049      ; 2.483      ;
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -379,7 +397,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 336.93 MHz ; 250.0 MHz       ; ctl        ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 340.14 MHz ; 250.0 MHz       ; ctl        ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -389,7 +407,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; ctl   ; -1.968 ; -32.110           ;
+; ctl   ; -1.940 ; -37.363           ;
 +-------+--------+-------------------+
 
 
@@ -419,7 +437,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; ctl   ; -3.000 ; -29.985                         ;
+; ctl   ; -3.000 ; -33.840                         ;
 +-------+--------+---------------------------------+
 
 
@@ -428,94 +446,103 @@ No paths to report.
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; -1.968 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 3.016      ;
-; -1.968 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 3.016      ;
-; -1.968 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 3.016      ;
-; -1.968 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 3.016      ;
-; -1.823 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 2.871      ;
-; -1.823 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 2.871      ;
-; -1.823 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 2.871      ;
-; -1.823 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 2.871      ;
-; -1.789 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.813      ;
-; -1.789 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.813      ;
-; -1.789 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.813      ;
-; -1.789 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.813      ;
-; -1.657 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 2.705      ;
-; -1.657 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 2.705      ;
-; -1.657 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 2.705      ;
-; -1.657 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 2.705      ;
-; -1.653 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.677      ;
-; -1.653 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.677      ;
-; -1.653 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.677      ;
-; -1.653 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.677      ;
-; -1.638 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; 0.055      ; 2.712      ;
-; -1.568 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.688      ;
-; -1.523 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.643      ;
-; -1.523 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.643      ;
-; -1.523 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.643      ;
-; -1.499 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.523      ;
-; -1.499 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.523      ;
-; -1.499 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.523      ;
-; -1.499 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 2.523      ;
-; -1.464 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.584      ;
-; -1.464 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.584      ;
-; -1.464 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.584      ;
-; -1.464 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.584      ;
-; -1.432 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.552      ;
-; -1.378 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; 0.055      ; 2.452      ;
-; -1.370 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.490      ;
-; -1.370 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.490      ;
-; -1.370 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.101      ; 2.490      ;
-; -1.359 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.335      ;
-; -1.334 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.310      ;
-; -1.314 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; 0.055      ; 2.388      ;
-; -1.255 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.055      ; 2.329      ;
-; -1.235 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.211      ;
-; -1.231 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.207      ;
-; -1.230 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.206      ;
-; -1.157 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.297      ;
-; -1.157 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.297      ;
-; -1.157 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.297      ;
-; -1.157 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.297      ;
-; -0.994 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.970      ;
-; -0.963 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.103      ;
-; -0.961 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.101      ;
-; -0.961 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.101      ;
-; -0.951 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.091      ;
-; -0.945 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.085      ;
-; -0.945 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.085      ;
-; -0.945 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.085      ;
-; -0.945 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.121      ; 2.085      ;
-; -0.732 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.055      ; 1.806      ;
-; -0.731 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.707      ;
-; -0.540 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.516      ;
-; -0.467 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.039     ; 1.447      ;
-; -0.452 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.171     ; 1.300      ;
-; -0.445 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.171     ; 1.293      ;
-; -0.434 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.162     ; 1.291      ;
-; -0.407 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.383      ;
-; -0.382 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.162     ; 1.239      ;
-; -0.370 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.162     ; 1.227      ;
-; -0.354 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.162     ; 1.211      ;
-; -0.349 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 1.385      ;
-; -0.324 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 1.360      ;
-; -0.323 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.038     ; 1.304      ;
-; -0.318 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.034      ; 1.371      ;
-; -0.300 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.034      ; 1.353      ;
-; -0.297 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 1.333      ;
-; -0.281 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.055      ; 1.355      ;
-; -0.254 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.171     ; 1.102      ;
-; -0.246 ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.087     ; 1.178      ;
-; -0.245 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.034      ; 1.298      ;
-; -0.238 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.171     ; 1.086      ;
-; -0.199 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.087     ; 1.131      ;
-; -0.199 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.087     ; 1.131      ;
-; -0.173 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.087     ; 1.105      ;
-; -0.165 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.034      ; 1.218      ;
-; -0.128 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.038     ; 1.109      ;
-; -0.122 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.017      ; 1.158      ;
-; -0.105 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.038     ; 1.086      ;
-; -0.070 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.038     ; 1.051      ;
+; -1.940 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.997      ;
+; -1.940 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.997      ;
+; -1.940 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.997      ;
+; -1.940 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.997      ;
+; -1.799 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.856      ;
+; -1.799 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.856      ;
+; -1.799 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.856      ;
+; -1.799 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.856      ;
+; -1.773 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.802      ;
+; -1.773 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.802      ;
+; -1.773 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.802      ;
+; -1.773 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.802      ;
+; -1.690 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.719      ;
+; -1.690 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.719      ;
+; -1.690 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.719      ;
+; -1.690 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.719      ;
+; -1.679 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.736      ;
+; -1.679 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.736      ;
+; -1.679 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.736      ;
+; -1.679 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.038      ; 2.736      ;
+; -1.671 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.700      ;
+; -1.671 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.700      ;
+; -1.671 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.700      ;
+; -1.671 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.010      ; 2.700      ;
+; -1.667 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.657      ;
+; -1.667 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.657      ;
+; -1.667 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.657      ;
+; -1.667 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.657      ;
+; -1.660 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.650      ;
+; -1.660 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.650      ;
+; -1.660 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.650      ;
+; -1.660 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.650      ;
+; -1.613 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.603      ;
+; -1.613 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.603      ;
+; -1.613 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.603      ;
+; -1.613 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.029     ; 2.603      ;
+; -1.572 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.548      ;
+; -1.505 ; beststack:inst|state[1] ; beststack:inst|z3       ; ctl          ; ctl         ; 1.000        ; 0.016      ; 2.540      ;
+; -1.487 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.463      ;
+; -1.444 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.420      ;
+; -1.413 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.389      ;
+; -1.410 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.386      ;
+; -1.377 ; beststack:inst|state[0] ; beststack:inst|z3       ; ctl          ; ctl         ; 1.000        ; 0.016      ; 2.412      ;
+; -1.359 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.335      ;
+; -1.352 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.328      ;
+; -1.302 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.278      ;
+; -1.297 ; beststack:inst|state[1] ; beststack:inst|z1       ; ctl          ; ctl         ; 1.000        ; 0.016      ; 2.332      ;
+; -1.289 ; beststack:inst|state[1] ; beststack:inst|z2       ; ctl          ; ctl         ; 1.000        ; 0.016      ; 2.324      ;
+; -1.289 ; beststack:inst|state[0] ; beststack:inst|z1       ; ctl          ; ctl         ; 1.000        ; 0.016      ; 2.324      ;
+; -1.288 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.320      ;
+; -1.288 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.320      ;
+; -1.288 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.320      ;
+; -1.288 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.320      ;
+; -1.282 ; beststack:inst|state[2] ; beststack:inst|z2       ; ctl          ; ctl         ; 1.000        ; 0.016      ; 2.317      ;
+; -1.280 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.256      ;
+; -1.277 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.309      ;
+; -1.277 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.309      ;
+; -1.277 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.309      ;
+; -1.277 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.309      ;
+; -1.197 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.043     ; 2.173      ;
+; -1.179 ; beststack:inst|state[0] ; beststack:inst|z2       ; ctl          ; ctl         ; 1.000        ; 0.016      ; 2.214      ;
+; -1.084 ; beststack:inst|state[2] ; beststack:inst|z1       ; ctl          ; ctl         ; 1.000        ; 0.016      ; 2.119      ;
+; -1.030 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.062      ;
+; -1.030 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.062      ;
+; -1.030 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.062      ;
+; -1.030 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.013      ; 2.062      ;
+; -0.966 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.103     ; 1.882      ;
+; -0.872 ; beststack:inst|state[2] ; beststack:inst|z3       ; ctl          ; ctl         ; 1.000        ; 0.016      ; 1.907      ;
+; -0.752 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.039     ; 1.732      ;
+; -0.718 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.002      ; 1.739      ;
+; -0.716 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.103     ; 1.632      ;
+; -0.707 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.043     ; 1.683      ;
+; -0.677 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; -0.064     ; 1.632      ;
+; -0.638 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.105     ; 1.552      ;
+; -0.580 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.039     ; 1.560      ;
+; -0.567 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.039     ; 1.547      ;
+; -0.465 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; -0.114     ; 1.370      ;
+; -0.451 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; -0.114     ; 1.356      ;
+; -0.435 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.103     ; 1.351      ;
+; -0.335 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.002      ; 1.356      ;
+; -0.307 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.002      ; 1.328      ;
+; -0.290 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.024     ; 1.285      ;
+; -0.276 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.103     ; 1.192      ;
+; -0.268 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.024     ; 1.263      ;
+; -0.250 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.024     ; 1.245      ;
+; -0.235 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.062     ; 1.192      ;
+; -0.232 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.024     ; 1.227      ;
+; -0.205 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.105     ; 1.119      ;
+; -0.194 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.105     ; 1.108      ;
+; -0.182 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; -0.114     ; 1.087      ;
+; -0.170 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; -0.114     ; 1.075      ;
+; -0.132 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.039     ; 1.112      ;
+; -0.099 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.062     ; 1.056      ;
+; -0.092 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.062     ; 1.049      ;
+; -0.085 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.062     ; 1.042      ;
+; -0.076 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.039     ; 1.056      ;
+; 0.069  ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.105     ; 0.845      ;
 ; 0.321  ; beststack:inst|over     ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.039     ; 0.659      ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -526,94 +553,103 @@ No paths to report.
 ; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.387 ; beststack:inst|over     ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.039      ; 0.597      ;
-; 0.739 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.087      ; 0.997      ;
-; 0.747 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.087      ; 1.005      ;
-; 0.757 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.171      ; 1.099      ;
-; 0.771 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.087      ; 1.029      ;
-; 0.811 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.162      ; 1.144      ;
-; 0.812 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.038      ; 1.021      ;
-; 0.820 ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.038      ; 1.029      ;
-; 0.837 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.038      ; 1.046      ;
-; 0.837 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.038      ; 1.046      ;
-; 0.843 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; -0.017     ; 0.997      ;
-; 0.852 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; -0.017     ; 1.006      ;
-; 0.862 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.162      ; 1.195      ;
-; 0.891 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.212      ;
-; 0.892 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.213      ;
-; 0.892 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.213      ;
-; 0.898 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.171      ; 1.240      ;
-; 0.903 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.202      ; 1.276      ;
-; 0.924 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.171      ; 1.266      ;
-; 0.927 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.162      ; 1.260      ;
-; 0.943 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.162      ; 1.276      ;
-; 0.948 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.171      ; 1.290      ;
-; 0.989 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.203      ;
-; 1.000 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.087      ; 1.258      ;
-; 1.024 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.370      ;
-; 1.025 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.346      ;
-; 1.027 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; -0.034     ; 1.164      ;
-; 1.027 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.348      ;
-; 1.027 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.348      ;
-; 1.028 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.374      ;
-; 1.038 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; -0.034     ; 1.175      ;
-; 1.041 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; -0.017     ; 1.195      ;
-; 1.046 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; -0.017     ; 1.200      ;
-; 1.053 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.202      ; 1.426      ;
-; 1.055 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; -0.034     ; 1.192      ;
-; 1.064 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.278      ;
-; 1.094 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; -0.034     ; 1.231      ;
-; 1.115 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.436      ;
-; 1.123 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.469      ;
-; 1.127 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.473      ;
-; 1.155 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.476      ;
-; 1.157 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.478      ;
-; 1.157 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.478      ;
-; 1.168 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.610      ;
-; 1.177 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.619      ;
-; 1.179 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.621      ;
-; 1.179 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.621      ;
-; 1.184 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.626      ;
-; 1.186 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 1.607      ;
-; 1.191 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.633      ;
-; 1.192 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.634      ;
-; 1.193 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.635      ;
-; 1.197 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.411      ;
-; 1.236 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.582      ;
-; 1.241 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.587      ;
-; 1.256 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.202      ; 1.629      ;
-; 1.266 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.587      ;
-; 1.267 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.709      ;
-; 1.290 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.732      ;
-; 1.291 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.733      ;
-; 1.292 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.271      ; 1.734      ;
-; 1.293 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 1.714      ;
-; 1.335 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.681      ;
-; 1.335 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.681      ;
-; 1.337 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.202      ; 1.710      ;
-; 1.339 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.685      ;
-; 1.340 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.686      ;
-; 1.355 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.569      ;
-; 1.396 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.150      ; 1.717      ;
-; 1.430 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 1.851      ;
-; 1.440 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 1.861      ;
-; 1.456 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 1.877      ;
-; 1.459 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 1.880      ;
-; 1.474 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.202      ; 1.847      ;
-; 1.500 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.714      ;
-; 1.547 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 1.968      ;
-; 1.561 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.907      ;
-; 1.563 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 1.984      ;
-; 1.566 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 1.987      ;
-; 1.566 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.175      ; 1.912      ;
-; 1.610 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.824      ;
-; 1.684 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 2.105      ;
-; 1.700 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 2.121      ;
-; 1.703 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.250      ; 2.124      ;
-; 1.803 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 2.017      ;
-; 1.840 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 2.054      ;
-; 1.842 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.202      ; 2.215      ;
-; 1.850 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 2.064      ;
+; 0.559 ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.062      ; 0.792      ;
+; 0.686 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.114      ; 0.971      ;
+; 0.704 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.105      ; 0.980      ;
+; 0.721 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.105      ; 0.997      ;
+; 0.722 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.105      ; 0.998      ;
+; 0.748 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.114      ; 1.033      ;
+; 0.770 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.062      ; 1.003      ;
+; 0.782 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.039      ; 0.992      ;
+; 0.789 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.039      ; 0.999      ;
+; 0.802 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.062      ; 1.035      ;
+; 0.802 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.016      ;
+; 0.872 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.105      ; 1.148      ;
+; 0.897 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.103      ; 1.171      ;
+; 0.912 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.103      ; 1.186      ;
+; 0.915 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.164      ; 1.250      ;
+; 0.923 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.137      ;
+; 0.928 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.164      ; 1.263      ;
+; 0.932 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.103      ; 1.206      ;
+; 0.935 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.024      ; 1.130      ;
+; 0.945 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.103      ; 1.219      ;
+; 1.001 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.359      ;
+; 1.009 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.039      ; 1.219      ;
+; 1.035 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.249      ;
+; 1.050 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.039      ; 1.260      ;
+; 1.054 ; beststack:inst|state[1] ; beststack:inst|z1       ; ctl          ; ctl         ; 0.000        ; 0.179      ; 1.404      ;
+; 1.060 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.024      ; 1.255      ;
+; 1.073 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.416      ;
+; 1.076 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.419      ;
+; 1.077 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.420      ;
+; 1.104 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.447      ;
+; 1.109 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.114      ; 1.394      ;
+; 1.116 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.114      ; 1.401      ;
+; 1.161 ; beststack:inst|state[0] ; beststack:inst|z1       ; ctl          ; ctl         ; 0.000        ; 0.179      ; 1.511      ;
+; 1.190 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.062      ; 1.423      ;
+; 1.190 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.548      ;
+; 1.193 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.536      ;
+; 1.196 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.539      ;
+; 1.197 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.540      ;
+; 1.209 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.552      ;
+; 1.211 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.554      ;
+; 1.212 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.555      ;
+; 1.217 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.560      ;
+; 1.226 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.584      ;
+; 1.227 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.172      ; 1.570      ;
+; 1.238 ; beststack:inst|state[2] ; beststack:inst|z2       ; ctl          ; ctl         ; 0.000        ; 0.179      ; 1.588      ;
+; 1.245 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.603      ;
+; 1.248 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.606      ;
+; 1.249 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.607      ;
+; 1.291 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.599      ;
+; 1.292 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.600      ;
+; 1.298 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.164      ; 1.633      ;
+; 1.309 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.617      ;
+; 1.310 ; beststack:inst|state[2] ; beststack:inst|z3       ; ctl          ; ctl         ; 0.000        ; 0.179      ; 1.660      ;
+; 1.316 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.064      ; 1.551      ;
+; 1.322 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.536      ;
+; 1.339 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.024      ; 1.534      ;
+; 1.355 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.663      ;
+; 1.382 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.685      ;
+; 1.391 ; beststack:inst|state[0] ; beststack:inst|z2       ; ctl          ; ctl         ; 0.000        ; 0.179      ; 1.741      ;
+; 1.398 ; beststack:inst|state[1] ; beststack:inst|z2       ; ctl          ; ctl         ; 0.000        ; 0.179      ; 1.748      ;
+; 1.401 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.704      ;
+; 1.401 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.704      ;
+; 1.402 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.705      ;
+; 1.429 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.643      ;
+; 1.451 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.809      ;
+; 1.454 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.812      ;
+; 1.454 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.762      ;
+; 1.454 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.762      ;
+; 1.455 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.813      ;
+; 1.455 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.763      ;
+; 1.458 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.039      ; 1.668      ;
+; 1.465 ; beststack:inst|state[2] ; beststack:inst|z1       ; ctl          ; ctl         ; 0.000        ; 0.179      ; 1.815      ;
+; 1.470 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.828      ;
+; 1.473 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.831      ;
+; 1.474 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.187      ; 1.832      ;
+; 1.480 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.783      ;
+; 1.497 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.805      ;
+; 1.498 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.806      ;
+; 1.498 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.806      ;
+; 1.499 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.802      ;
+; 1.499 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.802      ;
+; 1.500 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.803      ;
+; 1.515 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.823      ;
+; 1.537 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.751      ;
+; 1.540 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.754      ;
+; 1.561 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.137      ; 1.869      ;
+; 1.579 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.024      ; 1.774      ;
+; 1.592 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.895      ;
+; 1.611 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.914      ;
+; 1.611 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.914      ;
+; 1.612 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.132      ; 1.915      ;
+; 1.676 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 1.890      ;
+; 1.793 ; beststack:inst|state[0] ; beststack:inst|z3       ; ctl          ; ctl         ; 0.000        ; 0.179      ; 2.143      ;
+; 1.819 ; beststack:inst|state[1] ; beststack:inst|z3       ; ctl          ; ctl         ; 0.000        ; 0.179      ; 2.169      ;
+; 1.844 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 2.058      ;
+; 2.056 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 2.270      ;
+; 2.072 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.043      ; 2.286      ;
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -628,7 +664,7 @@ No synchronizer chains to report.
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; ctl   ; -0.526 ; -6.973            ;
+; ctl   ; -0.487 ; -8.127            ;
 +-------+--------+-------------------+
 
 
@@ -658,7 +694,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; ctl   ; -3.000 ; -28.008                         ;
+; ctl   ; -3.000 ; -31.480                         ;
 +-------+--------+---------------------------------+
 
 
@@ -667,94 +703,103 @@ No paths to report.
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; -0.526 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.551      ;
-; -0.526 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.551      ;
-; -0.526 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.551      ;
-; -0.526 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.551      ;
-; -0.469 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.479      ;
-; -0.469 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.479      ;
-; -0.469 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.479      ;
-; -0.469 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.479      ;
-; -0.438 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.463      ;
-; -0.438 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.463      ;
-; -0.438 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.463      ;
-; -0.438 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.463      ;
-; -0.419 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; 0.035      ; 1.461      ;
-; -0.394 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.419      ;
-; -0.394 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.419      ;
-; -0.394 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.419      ;
-; -0.394 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.018      ; 1.419      ;
-; -0.386 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.396      ;
-; -0.386 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.396      ;
-; -0.386 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.396      ;
-; -0.386 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.396      ;
-; -0.349 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.419      ;
-; -0.349 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.419      ;
-; -0.349 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.419      ;
-; -0.349 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.419      ;
-; -0.322 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.332      ;
-; -0.322 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.332      ;
-; -0.322 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.332      ;
-; -0.322 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.003      ; 1.332      ;
-; -0.271 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.027     ; 1.251      ;
-; -0.269 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.027     ; 1.249      ;
-; -0.262 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; 0.035      ; 1.304      ;
-; -0.261 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.331      ;
-; -0.261 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.331      ;
-; -0.261 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.331      ;
-; -0.261 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.331      ;
-; -0.255 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.325      ;
-; -0.255 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.325      ;
-; -0.255 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.325      ;
-; -0.255 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.063      ; 1.325      ;
-; -0.214 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.035      ; 1.256      ;
-; -0.209 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.027     ; 1.189      ;
-; -0.201 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; 0.035      ; 1.243      ;
-; -0.178 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.027     ; 1.158      ;
-; -0.138 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.027     ; 1.118      ;
-; -0.106 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.197      ;
-; -0.106 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.197      ;
-; -0.106 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.197      ;
-; -0.106 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.197      ;
-; -0.072 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.163      ;
-; -0.070 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.161      ;
-; -0.070 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.161      ;
-; -0.060 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.151      ;
-; -0.045 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.027     ; 1.025      ;
-; 0.004  ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.087      ;
-; 0.004  ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.087      ;
-; 0.004  ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.087      ;
-; 0.004  ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.084      ; 1.087      ;
-; 0.049  ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.027     ; 0.931      ;
-; 0.085  ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.035      ; 0.957      ;
-; 0.171  ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.115     ; 0.721      ;
-; 0.171  ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.115     ; 0.721      ;
-; 0.174  ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; -0.028     ; 0.805      ;
-; 0.209  ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.024     ; 0.774      ;
-; 0.231  ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.100     ; 0.676      ;
-; 0.259  ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.100     ; 0.648      ;
-; 0.263  ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.019      ; 0.763      ;
-; 0.266  ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; 0.022      ; 0.763      ;
-; 0.267  ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.027     ; 0.713      ;
-; 0.269  ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.100     ; 0.638      ;
-; 0.270  ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.100     ; 0.637      ;
-; 0.275  ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.019      ; 0.751      ;
-; 0.278  ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; 0.022      ; 0.751      ;
-; 0.292  ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.023     ; 0.692      ;
-; 0.293  ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.019      ; 0.733      ;
-; 0.300  ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.115     ; 0.592      ;
-; 0.304  ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; 0.035      ; 0.738      ;
-; 0.305  ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.115     ; 0.587      ;
-; 0.314  ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.054     ; 0.639      ;
-; 0.331  ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; 0.022      ; 0.698      ;
-; 0.333  ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.054     ; 0.620      ;
-; 0.339  ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.054     ; 0.614      ;
-; 0.348  ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.054     ; 0.605      ;
-; 0.365  ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; 0.022      ; 0.664      ;
-; 0.393  ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.023     ; 0.591      ;
-; 0.394  ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.019      ; 0.632      ;
-; 0.418  ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.023     ; 0.566      ;
-; 0.439  ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.023     ; 0.545      ;
+; -0.487 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.523      ;
+; -0.487 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.523      ;
+; -0.487 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.523      ;
+; -0.487 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.523      ;
+; -0.484 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.520      ;
+; -0.484 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.520      ;
+; -0.484 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.520      ;
+; -0.484 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.520      ;
+; -0.433 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.445      ;
+; -0.433 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.445      ;
+; -0.433 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.445      ;
+; -0.433 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.445      ;
+; -0.415 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.427      ;
+; -0.415 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.427      ;
+; -0.415 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.427      ;
+; -0.415 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.427      ;
+; -0.402 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.438      ;
+; -0.402 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.438      ;
+; -0.402 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.438      ;
+; -0.402 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; 0.029      ; 1.438      ;
+; -0.396 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.408      ;
+; -0.396 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.408      ;
+; -0.396 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.408      ;
+; -0.396 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; 0.005      ; 1.408      ;
+; -0.386 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.375      ;
+; -0.386 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.375      ;
+; -0.386 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.375      ;
+; -0.386 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.375      ;
+; -0.373 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.362      ;
+; -0.373 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.362      ;
+; -0.373 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.362      ;
+; -0.373 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.362      ;
+; -0.373 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.354      ;
+; -0.370 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.351      ;
+; -0.357 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.346      ;
+; -0.357 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.346      ;
+; -0.357 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.346      ;
+; -0.357 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.018     ; 1.346      ;
+; -0.330 ; beststack:inst|state[1] ; beststack:inst|z3       ; ctl          ; ctl         ; 1.000        ; 0.010      ; 1.347      ;
+; -0.314 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.295      ;
+; -0.306 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.287      ;
+; -0.303 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.284      ;
+; -0.285 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.266      ;
+; -0.267 ; beststack:inst|state[1] ; beststack:inst|z1       ; ctl          ; ctl         ; 1.000        ; 0.010      ; 1.284      ;
+; -0.263 ; beststack:inst|state[0] ; beststack:inst|z3       ; ctl          ; ctl         ; 1.000        ; 0.010      ; 1.280      ;
+; -0.262 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.243      ;
+; -0.259 ; beststack:inst|state[0] ; beststack:inst|z1       ; ctl          ; ctl         ; 1.000        ; 0.010      ; 1.276      ;
+; -0.246 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.227      ;
+; -0.228 ; beststack:inst|state[2] ; beststack:inst|z2       ; ctl          ; ctl         ; 1.000        ; 0.010      ; 1.245      ;
+; -0.228 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.209      ;
+; -0.189 ; beststack:inst|state[1] ; beststack:inst|z2       ; ctl          ; ctl         ; 1.000        ; 0.010      ; 1.206      ;
+; -0.184 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.198      ;
+; -0.184 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.198      ;
+; -0.184 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.198      ;
+; -0.184 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.198      ;
+; -0.179 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 1.000        ; -0.026     ; 1.160      ;
+; -0.171 ; beststack:inst|state[0] ; beststack:inst|z2       ; ctl          ; ctl         ; 1.000        ; 0.010      ; 1.188      ;
+; -0.170 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.184      ;
+; -0.170 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.184      ;
+; -0.170 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.184      ;
+; -0.170 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.184      ;
+; -0.139 ; beststack:inst|state[2] ; beststack:inst|z1       ; ctl          ; ctl         ; 1.000        ; 0.010      ; 1.156      ;
+; -0.135 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 1.000        ; -0.064     ; 1.078      ;
+; -0.051 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.065      ;
+; -0.044 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.058      ;
+; -0.044 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.058      ;
+; -0.044 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; 0.007      ; 1.058      ;
+; 0.002  ; beststack:inst|state[2] ; beststack:inst|z3       ; ctl          ; ctl         ; 1.000        ; 0.010      ; 1.015      ;
+; 0.023  ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 1.000        ; -0.064     ; 0.920      ;
+; 0.063  ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 1.000        ; -0.024     ; 0.920      ;
+; 0.064  ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.026     ; 0.917      ;
+; 0.070  ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.072     ; 0.865      ;
+; 0.089  ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; -0.040     ; 0.878      ;
+; 0.102  ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; -0.005     ; 0.900      ;
+; 0.150  ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.017     ; 0.840      ;
+; 0.150  ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.017     ; 0.840      ;
+; 0.181  ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 1.000        ; -0.078     ; 0.748      ;
+; 0.183  ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 1.000        ; -0.078     ; 0.746      ;
+; 0.203  ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 1.000        ; -0.064     ; 0.740      ;
+; 0.278  ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; -0.005     ; 0.724      ;
+; 0.286  ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 1.000        ; -0.005     ; 0.716      ;
+; 0.290  ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 1.000        ; -0.064     ; 0.653      ;
+; 0.317  ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.016     ; 0.674      ;
+; 0.324  ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 1.000        ; -0.072     ; 0.611      ;
+; 0.326  ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.016     ; 0.665      ;
+; 0.333  ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.072     ; 0.602      ;
+; 0.342  ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 1.000        ; -0.016     ; 0.649      ;
+; 0.345  ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 1.000        ; -0.078     ; 0.584      ;
+; 0.348  ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.032     ; 0.627      ;
+; 0.352  ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 1.000        ; -0.078     ; 0.577      ;
+; 0.353  ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 1.000        ; -0.016     ; 0.638      ;
+; 0.379  ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.017     ; 0.611      ;
+; 0.422  ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 1.000        ; -0.017     ; 0.568      ;
+; 0.428  ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 1.000        ; -0.032     ; 0.547      ;
+; 0.431  ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 1.000        ; -0.032     ; 0.544      ;
+; 0.439  ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 1.000        ; -0.032     ; 0.536      ;
+; 0.481  ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 1.000        ; -0.072     ; 0.454      ;
 ; 0.633  ; beststack:inst|over     ; beststack:inst|over     ; ctl          ; ctl         ; 1.000        ; -0.024     ; 0.350      ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -765,94 +810,103 @@ No paths to report.
 ; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.199 ; beststack:inst|over     ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.024      ; 0.307      ;
-; 0.199 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.024      ; 0.307      ;
-; 0.335 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.115      ; 0.534      ;
-; 0.337 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.054      ; 0.475      ;
-; 0.350 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.054      ; 0.488      ;
-; 0.368 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.054      ; 0.506      ;
-; 0.372 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.100      ; 0.556      ;
-; 0.391 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.023      ; 0.498      ;
-; 0.394 ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.023      ; 0.501      ;
-; 0.402 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.115      ; 0.601      ;
-; 0.402 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.023      ; 0.509      ;
-; 0.406 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.023      ; 0.513      ;
-; 0.416 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.100      ; 0.600      ;
-; 0.422 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.127      ; 0.633      ;
-; 0.426 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.115      ; 0.625      ;
-; 0.428 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; -0.019     ; 0.493      ;
-; 0.435 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.115      ; 0.634      ;
-; 0.435 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.100      ; 0.619      ;
-; 0.437 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; -0.019     ; 0.502      ;
-; 0.444 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.100      ; 0.628      ;
-; 0.466 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.054      ; 0.604      ;
-; 0.485 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.662      ;
-; 0.487 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.664      ;
-; 0.487 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.664      ;
-; 0.494 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.671      ;
-; 0.496 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.673      ;
-; 0.496 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.673      ;
-; 0.502 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; -0.022     ; 0.564      ;
-; 0.509 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; -0.022     ; 0.571      ;
-; 0.509 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; -0.022     ; 0.571      ;
-; 0.510 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.027      ; 0.621      ;
-; 0.513 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.027      ; 0.624      ;
-; 0.527 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.127      ; 0.738      ;
-; 0.530 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; -0.019     ; 0.595      ;
-; 0.531 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; -0.019     ; 0.596      ;
-; 0.534 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; -0.022     ; 0.596      ;
-; 0.563 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 0.802      ;
-; 0.566 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.827      ;
-; 0.567 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.760      ;
-; 0.567 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.828      ;
-; 0.568 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.829      ;
-; 0.569 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.746      ;
-; 0.571 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.764      ;
-; 0.571 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.748      ;
-; 0.571 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.748      ;
-; 0.572 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.833      ;
-; 0.578 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.839      ;
-; 0.579 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.028      ; 0.691      ;
-; 0.579 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.840      ;
-; 0.579 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.840      ;
-; 0.583 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.844      ;
-; 0.603 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.780      ;
-; 0.609 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.802      ;
-; 0.612 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.805      ;
-; 0.613 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.790      ;
-; 0.623 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.127      ; 0.834      ;
-; 0.640 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.901      ;
-; 0.641 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.902      ;
-; 0.641 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.902      ;
-; 0.645 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.177      ; 0.906      ;
-; 0.647 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.840      ;
-; 0.650 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.843      ;
-; 0.657 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.027      ; 0.768      ;
-; 0.682 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.875      ;
-; 0.682 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 0.921      ;
-; 0.688 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.881      ;
-; 0.688 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.093      ; 0.865      ;
-; 0.699 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 0.938      ;
-; 0.701 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 0.940      ;
-; 0.702 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 0.941      ;
-; 0.706 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.127      ; 0.917      ;
-; 0.723 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.916      ;
-; 0.728 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.921      ;
-; 0.738 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 0.977      ;
-; 0.750 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.027      ; 0.861      ;
-; 0.761 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.954      ;
-; 0.762 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.127      ; 0.973      ;
-; 0.766 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.109      ; 0.959      ;
-; 0.778 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.027      ; 0.889      ;
-; 0.819 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 1.058      ;
-; 0.824 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 1.063      ;
-; 0.827 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 1.066      ;
-; 0.875 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 1.114      ;
-; 0.881 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.027      ; 0.992      ;
-; 0.882 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 1.121      ;
-; 0.885 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.155      ; 1.124      ;
-; 0.894 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.027      ; 1.005      ;
-; 0.924 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.127      ; 1.135      ;
-; 0.933 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.027      ; 1.044      ;
+; 0.269 ; beststack:inst|r10      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.032      ; 0.385      ;
+; 0.315 ; beststack:inst|r20      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.072      ; 0.471      ;
+; 0.317 ; beststack:inst|r21      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.072      ; 0.473      ;
+; 0.319 ; beststack:inst|r22      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.072      ; 0.475      ;
+; 0.322 ; beststack:inst|r03      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.078      ; 0.484      ;
+; 0.350 ; beststack:inst|r00      ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.078      ; 0.512      ;
+; 0.378 ; beststack:inst|r11      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.032      ; 0.494      ;
+; 0.391 ; beststack:inst|r10      ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.017      ; 0.492      ;
+; 0.391 ; beststack:inst|state[2] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.026      ; 0.501      ;
+; 0.392 ; beststack:inst|r13      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.032      ; 0.508      ;
+; 0.395 ; beststack:inst|r12      ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.017      ; 0.496      ;
+; 0.395 ; beststack:inst|r23      ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.072      ; 0.551      ;
+; 0.419 ; beststack:inst|r31      ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.064      ; 0.567      ;
+; 0.425 ; beststack:inst|r32      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.064      ; 0.573      ;
+; 0.431 ; beststack:inst|r30      ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.064      ; 0.579      ;
+; 0.436 ; beststack:inst|r33      ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.064      ; 0.584      ;
+; 0.444 ; beststack:inst|state[1] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.095      ; 0.623      ;
+; 0.450 ; beststack:inst|r23      ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.016      ; 0.550      ;
+; 0.455 ; beststack:inst|state[2] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.095      ; 0.634      ;
+; 0.486 ; beststack:inst|state[1] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.026      ; 0.596      ;
+; 0.499 ; beststack:inst|r13      ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.017      ; 0.600      ;
+; 0.516 ; beststack:inst|state[0] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.706      ;
+; 0.518 ; beststack:inst|r20      ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.016      ; 0.618      ;
+; 0.519 ; beststack:inst|state[0] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.709      ;
+; 0.519 ; beststack:inst|state[0] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.709      ;
+; 0.521 ; beststack:inst|state[1] ; beststack:inst|z1       ; ctl          ; ctl         ; 0.000        ; 0.110      ; 0.715      ;
+; 0.527 ; beststack:inst|state[0] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.717      ;
+; 0.531 ; beststack:inst|r11      ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.017      ; 0.632      ;
+; 0.539 ; beststack:inst|state[0] ; beststack:inst|over     ; ctl          ; ctl         ; 0.000        ; 0.026      ; 0.649      ;
+; 0.541 ; beststack:inst|r02      ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.078      ; 0.703      ;
+; 0.541 ; beststack:inst|state[0] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.747      ;
+; 0.553 ; beststack:inst|r01      ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.078      ; 0.715      ;
+; 0.553 ; beststack:inst|state[0] ; beststack:inst|z1       ; ctl          ; ctl         ; 0.000        ; 0.110      ; 0.747      ;
+; 0.559 ; beststack:inst|state[1] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.765      ;
+; 0.579 ; beststack:inst|state[1] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.769      ;
+; 0.582 ; beststack:inst|state[1] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.772      ;
+; 0.582 ; beststack:inst|state[1] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.772      ;
+; 0.590 ; beststack:inst|state[1] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.780      ;
+; 0.598 ; beststack:inst|state[2] ; beststack:inst|z2       ; ctl          ; ctl         ; 0.000        ; 0.110      ; 0.792      ;
+; 0.604 ; beststack:inst|state[2] ; beststack:inst|z3       ; ctl          ; ctl         ; 0.000        ; 0.110      ; 0.798      ;
+; 0.608 ; beststack:inst|r12      ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.032      ; 0.724      ;
+; 0.627 ; beststack:inst|under    ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.040      ; 0.751      ;
+; 0.636 ; beststack:inst|state[2] ; beststack:inst|r22      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.826      ;
+; 0.639 ; beststack:inst|state[2] ; beststack:inst|r23      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.829      ;
+; 0.640 ; beststack:inst|state[2] ; beststack:inst|r21      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.830      ;
+; 0.646 ; beststack:inst|state[2] ; beststack:inst|r20      ; ctl          ; ctl         ; 0.000        ; 0.106      ; 0.836      ;
+; 0.648 ; beststack:inst|state[2] ; beststack:inst|r12      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.854      ;
+; 0.659 ; beststack:inst|state[0] ; beststack:inst|under    ; ctl          ; ctl         ; 0.000        ; 0.095      ; 0.838      ;
+; 0.667 ; beststack:inst|r21      ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.016      ; 0.767      ;
+; 0.668 ; beststack:inst|state[1] ; beststack:inst|z2       ; ctl          ; ctl         ; 0.000        ; 0.110      ; 0.862      ;
+; 0.670 ; beststack:inst|state[0] ; beststack:inst|z2       ; ctl          ; ctl         ; 0.000        ; 0.110      ; 0.864      ;
+; 0.671 ; beststack:inst|state[0] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.877      ;
+; 0.674 ; beststack:inst|state[0] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.880      ;
+; 0.674 ; beststack:inst|state[0] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.880      ;
+; 0.685 ; beststack:inst|state[2] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 0.850      ;
+; 0.685 ; beststack:inst|state[1] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.891      ;
+; 0.687 ; beststack:inst|state[2] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 0.852      ;
+; 0.687 ; beststack:inst|state[2] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 0.852      ;
+; 0.688 ; beststack:inst|state[2] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 0.853      ;
+; 0.688 ; beststack:inst|state[1] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.026      ; 0.798      ;
+; 0.688 ; beststack:inst|state[1] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.894      ;
+; 0.688 ; beststack:inst|state[1] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.894      ;
+; 0.695 ; beststack:inst|state[2] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.024      ; 0.803      ;
+; 0.709 ; beststack:inst|state[0] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.026      ; 0.819      ;
+; 0.710 ; beststack:inst|state[0] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.877      ;
+; 0.711 ; beststack:inst|state[0] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.878      ;
+; 0.713 ; beststack:inst|state[2] ; beststack:inst|z1       ; ctl          ; ctl         ; 0.000        ; 0.110      ; 0.907      ;
+; 0.715 ; beststack:inst|state[2] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.882      ;
+; 0.715 ; beststack:inst|state[2] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.882      ;
+; 0.715 ; beststack:inst|state[2] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.882      ;
+; 0.719 ; beststack:inst|state[0] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.886      ;
+; 0.724 ; beststack:inst|state[1] ; beststack:inst|r02      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.891      ;
+; 0.725 ; beststack:inst|state[1] ; beststack:inst|r00      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.892      ;
+; 0.733 ; beststack:inst|state[1] ; beststack:inst|r03      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.900      ;
+; 0.736 ; beststack:inst|state[0] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.903      ;
+; 0.742 ; beststack:inst|state[2] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.909      ;
+; 0.755 ; beststack:inst|state[1] ; beststack:inst|r01      ; ctl          ; ctl         ; 0.000        ; 0.083      ; 0.922      ;
+; 0.771 ; beststack:inst|state[1] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.026      ; 0.881      ;
+; 0.773 ; beststack:inst|state[2] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.026      ; 0.883      ;
+; 0.783 ; beststack:inst|state[2] ; beststack:inst|r13      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.989      ;
+; 0.786 ; beststack:inst|state[2] ; beststack:inst|r10      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.992      ;
+; 0.787 ; beststack:inst|state[2] ; beststack:inst|r11      ; ctl          ; ctl         ; 0.000        ; 0.122      ; 0.993      ;
+; 0.792 ; beststack:inst|r22      ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.016      ; 0.892      ;
+; 0.809 ; beststack:inst|state[1] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 0.974      ;
+; 0.811 ; beststack:inst|state[1] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 0.976      ;
+; 0.811 ; beststack:inst|state[1] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 0.976      ;
+; 0.812 ; beststack:inst|state[1] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 0.977      ;
+; 0.864 ; beststack:inst|state[0] ; beststack:inst|r33      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 1.029      ;
+; 0.871 ; beststack:inst|state[0] ; beststack:inst|r31      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 1.036      ;
+; 0.871 ; beststack:inst|state[0] ; beststack:inst|r30      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 1.036      ;
+; 0.872 ; beststack:inst|state[0] ; beststack:inst|r32      ; ctl          ; ctl         ; 0.000        ; 0.081      ; 1.037      ;
+; 0.882 ; beststack:inst|state[0] ; beststack:inst|z3       ; ctl          ; ctl         ; 0.000        ; 0.110      ; 1.076      ;
+; 0.893 ; beststack:inst|state[2] ; beststack:inst|state[0] ; ctl          ; ctl         ; 0.000        ; 0.026      ; 1.003      ;
+; 0.901 ; beststack:inst|state[1] ; beststack:inst|z3       ; ctl          ; ctl         ; 0.000        ; 0.110      ; 1.095      ;
+; 0.929 ; beststack:inst|state[0] ; beststack:inst|state[1] ; ctl          ; ctl         ; 0.000        ; 0.026      ; 1.039      ;
+; 1.001 ; beststack:inst|state[0] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.026      ; 1.111      ;
+; 1.004 ; beststack:inst|state[1] ; beststack:inst|state[2] ; ctl          ; ctl         ; 0.000        ; 0.026      ; 1.114      ;
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -867,10 +921,10 @@ No synchronizer chains to report.
 +------------------+---------+-------+----------+---------+---------------------+
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -2.237  ; 0.199 ; N/A      ; N/A     ; -3.000              ;
-;  ctl             ; -2.237  ; 0.199 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -37.349 ; 0.0   ; 0.0      ; 0.0     ; -29.985             ;
-;  ctl             ; -37.349 ; 0.000 ; N/A      ; N/A     ; -29.985             ;
+; Worst-case Slack ; -2.207  ; 0.199 ; N/A      ; N/A     ; -3.000              ;
+;  ctl             ; -2.207  ; 0.199 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -43.272 ; 0.0   ; 0.0      ; 0.0     ; -33.84              ;
+;  ctl             ; -43.272 ; 0.000 ; N/A      ; N/A     ; -33.840             ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -1059,7 +1113,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; ctl        ; ctl      ; 0        ; 0        ; 0        ; 280      ;
+; ctl        ; ctl      ; 0        ; 0        ; 0        ; 322      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1069,7 +1123,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; ctl        ; ctl      ; 0        ; 0        ; 0        ; 280      ;
+; ctl        ; ctl      ; 0        ; 0        ; 0        ; 322      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1094,9 +1148,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 8     ; 8    ;
-; Unconstrained Input Port Paths  ; 96    ; 96   ;
+; Unconstrained Input Port Paths  ; 105   ; 105  ;
 ; Unconstrained Output Ports      ; 30    ; 30   ;
-; Unconstrained Output Port Paths ; 114   ; 114  ;
+; Unconstrained Output Port Paths ; 198   ; 198  ;
 +---------------------------------+-------+------+
 
 
@@ -1223,7 +1277,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Wed Dec 07 22:36:08 2016
+    Info: Processing started: Fri Dec 09 11:35:18 2016
 Info: Command: quartus_sta finalProj -c finalProj
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1240,10 +1294,10 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.237
+Info (332146): Worst-case setup slack is -2.207
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.237             -37.349 ctl 
+    Info (332119):    -2.207             -43.272 ctl 
 Info (332146): Worst-case hold slack is 0.440
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1253,17 +1307,17 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -29.985 ctl 
+    Info (332119):    -3.000             -33.840 ctl 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.968
+Info (332146): Worst-case setup slack is -1.940
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.968             -32.110 ctl 
+    Info (332119):    -1.940             -37.363 ctl 
 Info (332146): Worst-case hold slack is 0.387
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1273,15 +1327,15 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -29.985 ctl 
+    Info (332119):    -3.000             -33.840 ctl 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.526
+Info (332146): Worst-case setup slack is -0.487
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.526              -6.973 ctl 
+    Info (332119):    -0.487              -8.127 ctl 
 Info (332146): Worst-case hold slack is 0.199
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1291,12 +1345,12 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -28.008 ctl 
+    Info (332119):    -3.000             -31.480 ctl 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 952 megabytes
-    Info: Processing ended: Wed Dec 07 22:36:12 2016
+    Info: Peak virtual memory: 954 megabytes
+    Info: Processing ended: Fri Dec 09 11:35:22 2016
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 

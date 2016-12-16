@@ -1,0 +1,2 @@
+module filter3(z3, z2, z1, r30, r31, r32, r33);
+	input z3, z2, z1

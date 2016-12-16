@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 152 352)
+	(rect 16 16 152 416)
 	(text "beststack" (rect 5 0 42 12)(font "Arial" ))
-	(text "inst" (rect 8 320 20 332)(font "Arial" ))
+	(text "inst" (rect 8 384 20 396)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -213,7 +213,28 @@ agreement for further details.
 		(text "under" (rect 93 299 115 311)(font "Arial" ))
 		(line (pt 136 304)(pt 120 304)(line_width 1))
 	)
+	(port
+		(pt 136 320)
+		(output)
+		(text "z3" (rect 0 0 8 12)(font "Arial" ))
+		(text "z3" (rect 107 315 115 327)(font "Arial" ))
+		(line (pt 136 320)(pt 120 320)(line_width 1))
+	)
+	(port
+		(pt 136 336)
+		(output)
+		(text "z2" (rect 0 0 8 12)(font "Arial" ))
+		(text "z2" (rect 107 331 115 343)(font "Arial" ))
+		(line (pt 136 336)(pt 120 336)(line_width 1))
+	)
+	(port
+		(pt 136 352)
+		(output)
+		(text "z1" (rect 0 0 7 12)(font "Arial" ))
+		(text "z1" (rect 108 347 115 359)(font "Arial" ))
+		(line (pt 136 352)(pt 120 352)(line_width 1))
+	)
 	(drawing
-		(rectangle (rect 16 16 120 320)(line_width 1))
+		(rectangle (rect 16 16 120 384)(line_width 1))
 	)
 )

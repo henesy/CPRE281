@@ -53,6 +53,13 @@ agreement for further details.
 		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port
+		(pt 0 96)
+		(input)
+		(text "en" (rect 0 0 9 12)(font "Arial" ))
+		(text "en" (rect 21 91 30 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
 		(pt 120 32)
 		(output)
 		(text "A" (rect 0 0 8 12)(font "Arial" ))
